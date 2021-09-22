@@ -23,6 +23,6 @@ script:
   - docker run -e CI=true roullli/notejam-test ./notejam/manage.py test
 
 deploy:
-  - docker build -t roullli/notejam:v1 -f ./Dockerfile .
-  - docker push roullli/notejam:v1
+  - docker build -t roullli/notejam -f ./Dockerfile .
+  - docker push roullli/notejam
   - kubectl apply -f ./k8s
