@@ -13,4 +13,4 @@ EXPOSE 8000
 
 CMD ["sh", "./entrypoint.sh"]
 
-VOLUME /app
+# VOLUME /app
