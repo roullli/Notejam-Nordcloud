@@ -13,5 +13,5 @@ RUN set -ex ;\
 
 ENTRYPOINT ["sh", "./entrypoint.sh"]
 
-STOPSIGNAL SIGKILL
+STOPSIGNAL SIGQUIT
 # VOLUME /app
