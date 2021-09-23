@@ -21,6 +21,6 @@ spec:
           image: roullli/notejam:v1
           ports:
             - containerPort: 8000
-        - volumeMounts:
+         volumeMounts:
             - name: storage
               mountPath: /app
