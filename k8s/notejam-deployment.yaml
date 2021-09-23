@@ -18,7 +18,7 @@ spec:
             claimName: database-persistent-volume-claim
       containers:
         - name: notejam
-          image: roullli/notejam:v4
+          image: roullli/notejam
           ports:
             - containerPort: 8000
           volumeMounts:

@@ -11,6 +11,6 @@ RUN set -ex ;\
 
 # RUN chmod a+x ./entrypoint.sh
 
-ENTRYPOINT ./notejam/manage.py runserver 0.0.0.0:8000
+ENTRYPOINT sh ./notejam/manage.py runserver 0.0.0.0:8000
 
 # VOLUME /app
