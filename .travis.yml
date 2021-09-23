@@ -16,7 +16,7 @@ before_install:
   - gcloud config set compute/zone europe-north1-a
   - gcloud container clusters get-credentials notejam-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t roullli/notejam-test .
+  - docker build -t roullli/notejam-test -f Dokerfile.dev .
   - docker push roullli/notejam-test
 
 script:

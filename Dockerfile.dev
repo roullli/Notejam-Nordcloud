@@ -11,6 +11,4 @@ RUN set -ex ;\
 
 RUN chmod a+x ./entrypoint.sh
 
-ENTRYPOINT ["sh", "./entrypoint.sh"]
-
-# VOLUME /app
+CMD ["sh", "./entrypoint.sh"]
