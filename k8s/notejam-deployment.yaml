@@ -23,4 +23,4 @@ spec:
             - containerPort: 8000
           volumeMounts:
             - name: storage
-              mountPath: /app
+              mountPath: .
