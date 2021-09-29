@@ -6,21 +6,21 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: notejam
+       component: notejam
   template:
     metadata:
-      labels:
-        component: notejam
+       labels:
+         component: notejam
     spec:
-      # volumes:
-      #   - name: storage
-      #     persistentVolumeClaim:
-      #       claimName: database-persistent-volume-claim
-      containers:
-        - name: notejam
-          image: roullli/notejam:$SHA_V
-          ports:
-            - containerPort: 8000
-          # volumeMounts:
-          #   - name: storage
-          #     mountPath: /app/notejam.db
+       volumes:
+       - name: storage
+         persistentVolumeClaim:
+           claimName: database-persistent-volume-claim
+       containers:
+       - name: notejam
+         image: roullli/notejam:$SHA_V
+         ports:
+           - containerPort: 8000
+         volumeMounts:
+           - name: storage
+             mountPath: /app
