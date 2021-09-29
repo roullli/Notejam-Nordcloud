@@ -12,15 +12,15 @@ spec:
        labels:
          component: notejam
     spec:
-       volumes:
-       - name: storage
-         persistentVolumeClaim:
-           claimName: database-persistent-volume-claim
+      #  volumes:
+      #  - name: storage
+      #    persistentVolumeClaim:
+      #      claimName: database-persistent-volume-claim
        containers:
        - name: notejam
          image: roullli/notejam:$SHA_V
          ports:
            - containerPort: 8000
-         volumeMounts:
-           - name: storage
-             mountPath: /app
+        #  volumeMounts:
+        #    - name: storage
+        #      mountPath: /app
